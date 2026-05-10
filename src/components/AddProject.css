@@ -1,65 +1,84 @@
-.add-project-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+/* ADD PROJECT SECTION */
+
+.add-project-container{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
+    margin-bottom: 40px;
+    border: 2px solid #e0e7ff;
 }
 
-.add-project-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+.add-project-title{
+    font-size: 2.3rem;
+    color: #312e81;
+    margin-bottom: 30px;
 }
 
-.add-project-form {
+.project-form{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
 }
 
-.form-group {
+.form-group{
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
+.form-group label{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #334155;
 }
 
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+.project-input,
+.project-textarea{
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
+    border: 2px solid #c7d2fe;
+    font-size: 1rem;
     outline: none;
-    transition: 0.2s;
+    background: #f8fafc;
 }
 
-input:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+.project-input:focus,
+.project-textarea:focus{
+    border-color: #6366f1;
+    background: white;
+    box-shadow: 0 0 10px rgba(99,102,241,0.2);
 }
 
-.error-text {
-    color: red;
-    font-size: 13px;
-    margin-top: 5px;
+.project-textarea{
+    min-height: 150px;
+    resize: none;
 }
 
-.submit-btn {
-    padding: 10px;
-    background: #4a90e2;
-    color: white;
+.add-btn{
+    width: 220px;
+    padding: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.submit-btn:hover {
-    background: #357abd;
+.add-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(99,102,241,0.25);
+}
+
+.error-message{
+    color: crimson;
+    font-size: 0.95rem;
+    font-weight: 500;
 }

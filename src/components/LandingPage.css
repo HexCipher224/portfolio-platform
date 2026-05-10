@@ -1,42 +1,55 @@
-.landing-container {
-  min-height: 100vh;
-  padding: 30px;
-  background: #f5f7fb;
+/* LandingPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.landing-header {
-  text-align: center;
-  margin-bottom: 30px;
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3156bd, #eef2ff, #fdf2f8);
+    min-height: 100vh;
+    color: #1e293b;
 }
 
-.landing-header h1 {
-  font-size: 28px;
-  margin-bottom: 8px;
+/* Main Container */
+div{
+    width: 100%;
 }
 
-.landing-header p {
-  color: #666;
+/* Page Heading */
+h1{
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #312e81;
+    letter-spacing: 1px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border-bottom: 4px solid #6366f1;
+    margin-bottom: 40px;
 }
 
-.landing-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* Add smooth transitions */
+button,
+input,
+textarea{
+    transition: all 0.3s ease;
 }
 
-/* mobile responsiveness */
-@media (max-width: 768px) {
-  .landing-main {
-    grid-template-columns: 1fr;
-  }
-}
+/* Responsive */
+@media(max-width:768px){
 
-.form-section,
-.search-section {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    h1{
+        font-size: 2rem;
+        padding: 25px 10px;
+    }
+}
+.landing-page {
+    background-color: #2a2c9a;
+    min-height: 100vh;
 }
