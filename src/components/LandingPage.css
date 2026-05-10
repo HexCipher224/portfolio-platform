@@ -1,0 +1,42 @@
+.landing-container {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.landing-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.landing-header p {
+  color: #666;
+}
+
+.landing-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* mobile responsiveness */
+@media (max-width: 768px) {
+  .landing-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-section,
+.search-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
