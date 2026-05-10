@@ -1,10 +1,14 @@
-import "./App.css";
-import LandingPage from "./components/LandingPage";
+import { useState } from 'react'
+import LandingPage from './components/LandingPage'
+import './App.css'
 
-function App () {
-    <div>
-        <LandingPage/>
-    </div>
+function App() {
+
+    return (
+    <>
+    <LandingPage />
+    </>
+    )
 }
 
-export default App;
+export default App
