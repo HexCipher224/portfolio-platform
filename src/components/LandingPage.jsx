@@ -1,5 +1,5 @@
-import AddProject from "./Addproject";
-import Searchproject from "./Searchproject";
+import AddProject from "./AddProject";
+import SearchProject from "./SearchProject";
 import {useState} from "react";
 
 function LandingPage () {
@@ -10,8 +10,10 @@ function LandingPage () {
     return (
         <div>
             <h1>Personal Project Showcase App</h1>
-            <AddProject addProject={addProject}/>\
-            <Searchproject newProject={newProject}/>
+            <AddProject addProject={addProject}/>
+            <SearchProject newProject={newProject}/>
         </div>
     )
 }
+
+export default LandingPage;
