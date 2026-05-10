@@ -1,33 +1,24 @@
-import AddProject from "./AddProject";
-import SearchProject from "./SearchProject";
-import { useState } from "react";
-import "./LandingPage.css";
+import AddProject from "./AddProject"; 
+import SearchProject from "./SearchProject"; 
+import {useState} from "react";  
 
-function LandingPage() {
-    const [newProject, setNewProject] = useState([]);
 
-    function addProject(theProject) {
-    setNewProject([...newProject, theProject]);
-    }
 
-    return (
-    <div className="landing-container">
-        <header className="landing-header">
-        <h1>Personal Project Showcase App</h1>
-        <p>Manage, track, and showcase your projects easily</p>
-        </header>
+function LandingPage () {     
+    
+    const [newProject, setNewProject] = useState([]) 
 
-        <main className="landing-main">
-        <section className="form-section">
-            <AddProject addProject={addProject} />
-        </section>
+    function addProject (theProject) {         
+        setNewProject ([...newProject, theProject])    
+    }    
 
-        <section className="search-section">
-            <SearchProject newProject={newProject} />
-        </section>
-        </main>
-    </div>
-    );
-}
-
+    
+    return (       
+        <div>       
+            <h1>Personal Project Showcase App</h1>            
+                <AddProject addProject={addProject}/>            
+                <SearchProject newProject={newProject}/>         
+        </div>    
+        ) }  
+        
 export default LandingPage;
