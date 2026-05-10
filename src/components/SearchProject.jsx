@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./SearchProject.css";
 
 function SearchProject({ newProject }) {
     const [query, setQuery] = useState("");
@@ -11,36 +10,35 @@ function SearchProject({ newProject }) {
     );
 
     return (
-    <div className="search-container">
-        <input
-        className="search-input"
-        placeholder="Search projects..."
+    <div>
+    <input
+        placeholder="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        />
+    />
 
-        {newProject.length > 0 && (
-        <p className="search-info">
-            {filtered.length} of {newProject.length} project
-            {newProject.length !== 1 ? "s" : ""}
-            {query && ` matching "${query}"`}
+    {newProject.length > 0 && (
+        <p>
+        {filtered.length} of {newProject.length} project{newProject.length !== 1 ? "s" : ""}
+        {query && ` matching "${query}"`}
         </p>
-        )}
+    )}
 
-        {newProject.length === 0 ? (
-        <p className="empty-text">No projects yet. Add one above.</p>
-        ) : filtered.length === 0 && query ? (
-        <p className="empty-text">No project match "{query}"</p>
-        ) : (
-        <ul className="project-list">
+    {newProject.length === 0 ? (
+        <p>No projects yet. Add one above</p>
+    ) : filtered.length === 0 && query ? (
+        <p>No project match "{query}"</p>
+    ) : (
+        <ul>
             {filtered.map((project) => (
-            <li key={project.id} className="project-card">
+            <li key={project.id}>
                 <strong>{project.title}</strong>
-                <p>{project.description}</p>
+                {/* FIXED: Reference the individual project, not the array */}
+                <p>{project.description}</p> 
             </li>
-            ))}
+        ))}
         </ul>
-        )}
+    )}
     </div>
     );
 }

@@ -1,17 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #222;
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc, #ede9fe);
+    min-height: 100vh;
+    color: #1e293b;
 }
 
-.app-container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
+/* Main App Container */
+
+.app-container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Smooth animations */
+
+button,
+input,
+textarea,
+.project-card{
+    transition: all 0.3s ease;
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #6366f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #4f46e5;
 }
