@@ -1,6 +1,8 @@
 import { useState } from "react";
+import "./SearchProject.css";
 
 function SearchProject({ newProject }) {
+
     const [query, setQuery] = useState("");
 
     const filtered = newProject.filter(
@@ -9,36 +11,69 @@ function SearchProject({ newProject }) {
         p.description.toLowerCase().includes(query.toLowerCase())
     );
 
-    return (
-    <div>
+return (
+
+    <div className="search-project-container">
+
     <input
-        placeholder="search"
+        className="search-input"
+        placeholder="Search projects..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
     />
 
-    {newProject.length > 0 && (
-        <p>
-        {filtered.length} of {newProject.length} project{newProject.length !== 1 ? "s" : ""}
-        {query && ` matching "${query}"`}
+        {newProject.length > 0 && (
+        <p className="project-count">
+            {filtered.length} of {newProject.length} project
+            {newProject.length !== 1 ? "s" : ""}
+            {query && ` matching "${query}"`}
         </p>
     )}
 
-    {newProject.length === 0 ? (
-        <p>No projects yet. Add one above</p>
+        {newProject.length === 0 ? (
+
+        <p className="empty-message">
+            No projects yet. Add one above.
+        </p>
+
     ) : filtered.length === 0 && query ? (
-        <p>No project match "{query}"</p>
+
+        <p className="empty-message">
+            No project match "{query}"
+        </p>
+
     ) : (
-        <ul>
-            {filtered.map((project) => (
-            <li key={project.id}>
-                <strong>{project.title}</strong>
-                {/* FIXED: Reference the individual project, not the array */}
-                <p>{project.description}</p> 
+
+        <ul className="project-list">
+
+        {filtered.map((project) => (
+
+            <li key={project.id} className="project-card">
+
+                <div className="project-icon">
+                    🚀
+                </div>
+
+                <div className="project-content">
+
+                <strong className="project-title">
+                    {project.title}
+                </strong>
+
+                <p className="project-description">
+                    {project.description}
+                </p>
+
+            </div>
+
             </li>
+
         ))}
+
         </ul>
-    )}
+
+        )}
+
     </div>
     );
 }
